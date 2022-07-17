@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+/* header */
+
+header {
+    display: flex;
+    /* Esnek yerleşim düzeni, bir kap içindeki duyarlı öğelerin ekran boyutuna bağlı olarak otomatik olarak düzenlenmesine izin verir. */
+    justify-content: space-between;
+    /* justify-content:Flex özelliğine sahip olan bir kapsayıcının yatay eksende nasıl hizalanacağını ayarlar.
+    space-between: İlk nesne başta, son nesne sonda olacak şekilde nesneler eşit olarak kapsayıcının içerisinde dizilirler */
+    align-items: center;
+    padding: 10px 18%;
+    border-bottom: 1px solid rgba(219, 219, 219, 1);
+    background-color: white;
+    position: sticky;
+    /* Position: sticky kaydırma çubuklarını takip eder ve istenilen pozisyon yakalandığında nesneyi o noktada sabitler */
+    top: 0;
+    z-index: 10;
+    /* z-index değeri; aynı z-ekseninde bulunan(kapsayan elementler hariç) katmanların altta mı üstte mi kalacağınız belirlemek için kullanılır. */
+}
+
+header .logo {
+    height: 29px;
+}
+
+header .logo img {
+    height: 100%;
+    object-fit: contain;
+    /* object-fit
+contain: En/boy oranını korurken kutuya doldurmak için duruma göre resmin boyutunu artırır veya azaltır */
+}
+
+header .search-box {
+    width: 250px;
+    background-color: rgba(239, 239, 239, 1);
+    padding: 3px 16px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+}
+
+header .search-box i {
+    /* padding: 2px; */
+    margin-right: 3px;
+}
+
+header .search-box input {
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: rgba(239, 239, 239, 1);
+    padding: 10px;
+    font-size: 15px;
+    color: #8e8e8e;
+}
+
+header nav ul {
+    list-style: none;
+    /* isaretleri siler */
+    display: flex;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li:last-child {
+    margin-right: 0px;
+}
+
+header nav ul li a img {
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+header nav ul li a i {
+    font-size: 22px;
+    color: rgba(38, 38, 38, 1);
+}
+
+
+/* Body sections */
+
+section {
+    padding: 30px 18%;
+    background-color: #fafafa;
+    display: flex;
+}
+
+
+/* left side ile rigt-side arasında 100 tamalaycak sekilde genişlik verildi */
+
+.left-side {
+    width: 65%;
+}
+
+.story {
+    display: flex;
+    padding: 16px;
+    background-color: white;
+    border: 1px solid rgba(219, 219, 219, 1);
+    border-radius: 3px;
+}
+
+.story .stories {
+    width: 17%;
+}
+
+.story .stories a img {
+    border-radius: 50%;
+    border: 2px solid #c62d8f;
+    padding: 1px;
+    object-fit: cover;
+}
+
+.story .stories p {
+    width: 90%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #262626;
+}
+
+
+/* Posts */
+
+.posts {
+    margin: 25px 0;
+    background-color: white;
+    border: 1px solid rgba(219, 219, 219, 1);
+    border-radius: 3px;
+}
+
+.posts .post-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+.posts .post-title .post-left {
+    display: flex;
+    align-items: center;
+}
+
+.posts .post-title .post-left .image {
+    margin-right: 25%;
+}
+
+.posts .post-title .post-left .image img {
+    border-radius: 100%;
+    padding: 1px;
+    object-fit: cover;
+}
+
+.deatils .posts .post-title .post-left .deatils .name {
+    /* padding-bottom: 2px; */
+    font-weight: bold;
+}
+
+.posts .post-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.posts .post-title .post-left .details p {
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+
+.posts .post-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.posts .post-footer .save {
+    font-size: 22px;
+}
+
+.posts .post-footer-content {
+    padding: 0 16px 16px 16px;
+}
+
+.posts .post-footer-content p {
+    margin-bottom: 3px;
+}
+
+.posts .post-footer-content .likes {
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+
+.posts .post-footer-content .name {
+    font-weight: 600;
+    margin-top: 6px;
+}
+
+.posts .post-footer-content span {
+    margin-left: 5px;
+    font-weight: normal;
+}
+
+.posts .post-footer-content .posting-time {
+    font-size: 10px;
+    margin-top: 6px;
+}
+
+.posts .add-comment {
+    padding: 16px;
+    border-top: 1px solid #efefef;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.posts .add-comment .left-side {
+    display: flex;
+    align-items: center;
+}
+
+.posts .add-comment .left-side i {
+    font-style: 22px;
+    margin-right: 15px;
+}
+
+.posts .add-comment .left-side input {
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 14px;
+}
+
+.posts .post-footer .like-share-comment i {
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+.right-side {
+    width: 35%;
+    margin-top: 15px;
+    position: fixed;
+    right: 30px;
+}
+
+.right-side .profile-title {
+    display: flex;
+    align-items: center;
+}
+
+.right-side .profile-title .profile-left {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.right-side .profile-title .profile-left .image img {
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.right-side .profile-title .profile-left .details .name {
+    padding-bottom: 3px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.right-side .profile-title .profile-right p {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+    margin-left: 90px;
+}
+
+.suggestions {
+    display: flex;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.suggestions p {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.suggestions p:last-child {
+    margin-right: 0px;
+}
+
+.suggestions .sugright {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+    margin-left: 150px;
+}
+
+.suggestion-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.suggestion-title .suggestion-left {
+    display: flex;
+    align-items: center;
+    margin-right: 60px;
+}
+
+.suggestion-title .suggestion-left .image img {
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.suggestion-title .suggestion-left .details .name {
+    padding-bottom: 3px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.suggestion-title .suggestion-right p {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+    margin-left: 90px;
+}
+
+
+/* media queries */
+
+@media (max-width: 992px) {
+    header {
+        padding: 10px 20px;
+    }
+    section .left-side {
+        width: 100%;
+    }
+    section .right-side {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    header .search-box {
+        display: none;
+    }
+    section {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .story .stories {
+        width: 25px;
+    }
+    header nav ul li {
+        margin-right: 10px;
+    }
+}
